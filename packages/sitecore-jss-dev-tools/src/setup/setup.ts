@@ -240,7 +240,9 @@ export function setup(interactive: boolean, outputFile?: string, initialData?: J
   console.log(`JSS connection settings saved to ${chalk.green(outputFile)}`);
   console.log();
   console.log(chalk.green('NEXT STEPS'));
-  console.log(`* Ensure the ${chalk.green('hostName')} in /sitecore/config/*.config is configured as ${chalk.green(hostName)}, and in hosts file if needed.`);
+  console.log(`* Ensure the ${chalk.green('hostName')} in /sitecore/config/*.config is configured as ${chalk.green(hostName)}.`);
+  console.log(`* Add the ${chalk.green(hostName)} hostname in hosts file if needed.`);
+  console.log(`* Ensure an IIS binding exists on the Sitecore instance website for the ${chalk.green(hostName)} hostname.`);
   if (configObject.instancePath) {
     console.log(`* Deploy your configuration (i.e. '${chalk.green('jss deploy config')}')`);
     console.log(`* Deploy your app (i.e. '${chalk.green('jss deploy app -c -d')}')`);
